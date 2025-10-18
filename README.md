@@ -4,7 +4,7 @@ Bem-vindo à minha árvore de links! 🌳
 Uma página centralizada que conecta meus projetos, portfólio e redes sociais como desenvolvedor.
 
 ## 📌 Acesse
-Visite:([dev-juan-link-tree](https://dev-juan-ibanez.github.io/dev-juan-link-tree/))
+Visite: <a href="https://dev-juan-ibanez.github.io/dev-juan-link-tree/" target="_blank">Dev Juan Link Tree</a>
 
 ## 🚀 O que é?
 Uma página simples e estilizada com links para:
