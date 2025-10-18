@@ -18,7 +18,8 @@ Uma página simples e estilizada com links para:
 - Hospedado via GitHub Pages
 
 ## 📸 Visualização
-![Captura de tela](screenshot.png)
+![Captura de tela tema claro](screenshot.png)
+![Captura de tela tema escuro](screenshot-dark.png)
 
 ## 💻 Como rodar localmente
 1. Clone o repositório: `git clone https://github.com/dev-juan-ibanez/dev-juan-link-tree.git`
