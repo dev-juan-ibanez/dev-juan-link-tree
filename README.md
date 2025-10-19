@@ -33,9 +33,12 @@ Além disso:
 
 
 ## 📸 Visualização
-| Tema Claro | Tema Escuro |
-|-------------|-------------|
-| ![Tema claro](screenshot.png) | ![Tema escuro](screenshot-dark.png) |
+
+<p align="center">
+  <img src="assets/screenshot.png" alt="Captura de tela tema claro" width="30%" style="border-radius:10px; margin-right:10px;" />
+  <img src="assets/screenshot-dark.png" alt="Captura de tela tema escuro" width="30%" style="border-radius:10px;" />
+</p>
+
 
 
 ## 💻 Como rodar localmente
