@@ -135,6 +135,59 @@ input:checked + .slider::before {
 }
 
 /* ======================= */
+/* TEMA + IDIOMA */
+/* ======================= */
+.theme-language-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.theme-label {
+  font-weight: 500;
+  margin-right: 0.3rem;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.language-switch label {
+  cursor: pointer;
+}
+
+.language-switch select {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.language-switch select:hover {
+  background-color: var(--button-hover);
+  box-shadow: 0 0 8px rgba(0, 171, 228, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Adaptação para o modo escuro */
+[data-theme="dark"] .language-switch select {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border-color: #bcd8f0;
+}
+
+
+/* ======================= */
 /* CONTEÚDO */
 /* ======================= */
 .subtitle {
