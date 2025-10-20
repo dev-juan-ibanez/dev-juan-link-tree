@@ -52,6 +52,13 @@ cd dev-juan-link-tree
 ```
 3. Abra o arquivo index.html diretamente no navegador.
 
+## ☕ Gostou do projeto? Me pague um café!
+Se você curtiu o projeto e quer apoiar, pode me pagar um café! ☕  
+**Chave PIX**:  
+```text
+f0098b96-0433-4266-b392-4856d85caadc
+```
+**(Copie e cole a chave acima para contribuir!)**
 
 ## 🧑‍💻 Autor
 
