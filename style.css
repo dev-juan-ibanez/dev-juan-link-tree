@@ -13,7 +13,6 @@
   --text-color: #e9f1fa;
   --accent-color: #00abe4;
   --card-color: #12263f;
-  /* botões mais claros, texto mais escuro */
   --button-bg: #d9e7f5;
   --button-hover: #bcd8f0;
   --button-text: #0a192f;
@@ -163,14 +162,22 @@ input:checked + .slider::before {
 }
 
 .language-switch select {
-  padding: 5px 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 5px 24px 5px 10px;
   border-radius: 6px;
   border: 1px solid var(--accent-color);
   background-color: var(--button-bg);
   color: var(--button-text);
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
-  transition: all 0.3s ease;
+  font-size: 14px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%2300abe4" d="M2 4l4 4 4-4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
 }
 
 .language-switch select:hover {
@@ -179,13 +186,37 @@ input:checked + .slider::before {
   transform: translateY(-2px);
 }
 
-/* Adaptação para o modo escuro */
+.language-switch select option {
+  background-color: var(--card-color);
+  color: var(--text-color);
+}
+
+.language-switch select option:not(:checked) {
+  background-color: #ffffff;
+  color: #00abe4;
+}
+
+.language-switch select option:checked {
+  background-color: #00abe4;
+  color: #ffffff;
+}
+
 [data-theme="dark"] .language-switch select {
   background-color: var(--button-bg);
   color: var(--button-text);
   border-color: #bcd8f0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%23bcd8f0" d="M2 4l4 4 4-4z"/></svg>');
 }
 
+[data-theme="dark"] .language-switch select option:not(:checked) {
+  background-color: #12263f;
+  color: #bcd8f0;
+}
+
+[data-theme="dark"] .language-switch select option:checked {
+  background-color: #bcd8f0;
+  color: #0b1729;
+}
 
 /* ======================= */
 /* CONTEÚDO */
@@ -218,7 +249,7 @@ input:checked + .slider::before {
   color: var(--button-text);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Alinhamento à esquerda para ícone à esquerda do texto */
   gap: 0.6rem;
   padding: 0.8rem;
   border-radius: 8px;
@@ -226,12 +257,14 @@ input:checked + .slider::before {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .links a:hover {
   background-color: var(--button-hover);
   transform: translateY(-3px);
   box-shadow: 0 0 10px rgba(0, 171, 228, 0.3);
+  text-decoration: underline;
 }
 
 .links img {
@@ -266,35 +299,4 @@ footer span {
     flex-direction: column;
     gap: 0.5rem;
   }
-}
-
-/* ======================= */
-/* LINKS */
-/* ======================= */
-.links a {
-  background-color: var(--button-bg);
-  color: var(--button-text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  padding: 0.8rem;
-  border-radius: 8px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-  text-decoration: none; /* 🔹 Remove o sublinhado padrão */
-}
-
-.links a:hover {
-  background-color: var(--button-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 0 10px rgba(0, 171, 228, 0.3);
-  text-decoration: underline; /* 🔹 Aparece apenas no hover */
-}
-
-.links img {
-  width: 22px;
-  height: 22px;
 }
