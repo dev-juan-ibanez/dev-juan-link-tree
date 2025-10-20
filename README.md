@@ -14,7 +14,7 @@ Uma página simples, responsiva e estilizada com links para:
 - 📚 Currículo Lattes  
 - ✉️ Contato direto via Gmail  
 - 📷 Instagram  
-- 🌍 Site pessoal (Notion)
+- 🌍 Site pessoal (Github Pages)
 
 ## 🌐 Novidades
 Agora com **suporte multilíngue automático** (🇧🇷 **Português**, 🇺🇸 **Inglês** e 🇪🇸 **Espanhol**)!  
