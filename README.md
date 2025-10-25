@@ -31,6 +31,9 @@ Além disso:
 - Sistema de **internacionalização (i18n)** para múltiplos idiomas
 - Hospedado gratuitamente via **GitHub Pages**
 
+- ## 🛠️ Ícones utilizados
+
+- **FLATICON** Para os ícones utilizados nesse projeto — [Disponível em: https://www.flaticon.com/br/](https://www.flaticon.com/br/)
 
 ## 📸 Visualização
 
