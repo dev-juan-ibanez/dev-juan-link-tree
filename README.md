@@ -63,6 +63,9 @@ f0098b96-0433-4266-b392-4856d85caadc
 ```
 **(Copie e cole a chave acima para contribuir!)**
 
+## 📜 Licença
+Este projeto está licenciado sob a Licença MIT.
+
 ## 🧑‍💻 Autor
 
 Feito com ❤️ por **Juan Ibanez**  
