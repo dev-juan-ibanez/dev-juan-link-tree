@@ -29,7 +29,8 @@ function applyTheme(theme) {
     toggle.checked = theme === "dark";
     console.log("Applied theme:", theme); // Debug
   }
-  document.body.style.transition = "background-color 0.4s ease, color 0.4s ease";
+  document.body.style.transition =
+    "background-color 0.4s ease, color 0.4s ease";
 }
 
 function toggleTheme() {
@@ -65,67 +66,71 @@ const translations = {
     title: "Juan Ibañez",
     meta_description: "Página de links e portfólio de Juan Ibañez",
     subtitle: "💻 Desenvolvedor Full Stack",
-    bio: "Apaixonado por tecnologia, desenvolvimento web e soluções criativas. Trabalho com React, Node.js e Golang, criando sistemas modernos e eficientes.",
+    bio: "Mestre em elétrica com ênfase em engenharia de software e engenharia dirigida a modelos. Apaixonado por tecnologia, desenvolvimento web e soluções criativas. Trabalho com React, Node.js e Golang, criando sistemas modernos e eficientes.",
     images_alt: {
       avatar: "Avatar de Juan Ibañez",
       gmail: "Ícone e-mail",
       site: "Ícone site",
       github: "Ícone GitHub",
       linkedin: "Ícone LinkedIn",
+      instagram: "Ícone Instagram",
       lattes: "Ícone do Lattes",
-      instagram: "Ícone Instagram"
+      orcid: "Ícone ORCID",
     },
     links: {
       gmail: "Gmail",
       site: "Meu Site",
       github: "GitHub",
       linkedin: "LinkedIn",
+      instagram: "Instagram",
       lattes: "Currículo Lattes",
-      instagram: "Instagram"
+      orcid: "ORCID",
     },
     footer: {
       made: "Feito com ❤️ por",
-      rights: "© Todos os direitos reservados 2025."
+      rights: "© Todos os direitos reservados 2025.",
     },
     theme: "⚙️ Tema:",
     language: "🌐 Idioma:",
-    language_select_title: "Selecionar idioma"
+    language_select_title: "Selecionar idioma",
   },
   en: {
     title: "Juan Ibañez",
     meta_description: "Links and portfolio page of Juan Ibañez",
     subtitle: "💻 Full Stack Developer",
-    bio: "Passionate about technology, web development, and creative solutions. I work with React, Node.js, and Golang to build modern and efficient systems.",
+    bio: "Master in Electrical Engineering with emphasis on Software Engineering and Model-Driven Engineering. Passionate about technology, web development, and creative solutions. I work with React, Node.js, and Golang to build modern and efficient systems.",
     images_alt: {
       avatar: "Avatar of Juan Ibañez",
       gmail: "Email icon",
       site: "Website icon",
       github: "GitHub icon",
       linkedin: "LinkedIn icon",
+      instagram: "Instagram icon",
       lattes: "Lattes CV icon",
-      instagram: "Instagram icon"
+      orcid: "ORCID icon",
     },
     links: {
       gmail: "Gmail",
       site: "My Website",
       github: "GitHub",
       linkedin: "LinkedIn",
+      instagram: "Instagram",
       lattes: "Lattes CV",
-      instagram: "Instagram"
+      orcid: "ORCID",
     },
     footer: {
       made: "Made with ❤️ by",
-      rights: "© All rights reserved 2025."
+      rights: "© All rights reserved 2025.",
     },
     theme: "⚙️ Theme:",
     language: "🌐 Language:",
-    language_select_title: "Select language"
+    language_select_title: "Select language",
   },
   es: {
     title: "Juan Ibañez",
     meta_description: "Página de enlaces y portafolio de Juan Ibañez",
     subtitle: "💻 Desarrollador Full Stack",
-    bio: "Apasionado por la tecnología, el desarrollo web y las soluciones creativas. Trabajo con React, Node.js y Golang, creando sistemas modernos y eficientes.",
+    bio: "Máster en eléctrica con énfasis en ingeniería de software e ingeniería dirigida a modelos. Apasionado por la tecnología, el desarrollo web y las soluciones creativas. Trabajo con React, Node.js y Golang, creando sistemas modernos y eficientes.",
     images_alt: {
       avatar: "Avatar de Juan Ibañez",
       gmail: "Ícono de correo",
@@ -133,25 +138,37 @@ const translations = {
       github: "Ícono de GitHub",
       linkedin: "Ícono de LinkedIn",
       lattes: "Ícono de Currículum Lattes",
-      instagram: "Ícono de Instagram"
+      orcid: "Ícono de ORCID",
+      instagram: "Ícono de Instagram",
     },
     links: {
       gmail: "Gmail",
       site: "Mi Sitio Web",
       github: "GitHub",
       linkedin: "LinkedIn",
+      instagram: "Instagram",
       lattes: "Currículum Lattes",
-      instagram: "Instagram"
+      orcid: "ORCID",
     },
     footer: {
       made: "Hecho con ❤️ por",
-      rights: "© Todos los derechos reservados 2025."
+      rights: "© Todos los derechos reservados 2025.",
     },
     theme: "⚙️ Tema:",
     language: "🌐 Idioma:",
-    language_select_title: "Seleccionar idioma"
-  }
+    language_select_title: "Seleccionar idioma",
+  },
 };
+
+const linkOrder = [
+  "gmail",
+  "site",
+  "github",
+  "linkedin",
+  "instagram",
+  "lattes",
+  "orcid",
+];
 
 // Detecta idioma do navegador
 function getBrowserLang() {
@@ -228,36 +245,36 @@ function setLanguage(lang) {
     console.error(".avatar not found"); // Debug
   }
   const linkImages = document.querySelectorAll(".links li img");
-  const altKeys = ["gmail", "site", "github", "linkedin", "lattes", "instagram"];
   linkImages.forEach((img, i) => {
-    if (i < altKeys.length) {
-      console.log(`Updating link image ${i} alt to:`, t.images_alt[altKeys[i]]); // Debug
-      img.setAttribute("alt", t.images_alt[altKeys[i]]);
+    const key = linkOrder[i];
+    if (key && t.images_alt[key]) {
+      console.log(`Updating link image ${i} alt to:`, t.images_alt[key]); // Debug
+      img.setAttribute("alt", t.images_alt[key]);
+    } else {
+      console.error(`Alt text key not found for index ${i}`); // Debug
     }
   });
 
   // Atualiza textos dos links
-  const linkTexts = Object.values(t.links);
   const links = document.querySelectorAll(".links li a");
   console.log("Found links:", links.length); // Debug
   links.forEach((link, i) => {
-    // Remove todos os nós de texto existentes
-    link.childNodes.forEach(node => {
+    link.childNodes.forEach((node) => {
       if (node.nodeType === Node.TEXT_NODE) {
         node.remove();
       }
     });
-    // Adiciona novo nó de texto após o <img>
-    if (i < linkTexts.length) {
-      console.log(`Updating link ${i} text to:`, linkTexts[i]); // Debug
+    const key = linkOrder[i];
+    if (key && t.links[key]) {
+      console.log(`Updating link ${i} text to:`, t.links[key]); // Debug
       const img = link.querySelector("img");
       if (img) {
-        link.appendChild(document.createTextNode(` ${linkTexts[i]}`));
+        link.appendChild(document.createTextNode(` ${t.links[key]}`));
       } else {
         console.error(`Image not found in link ${i}`); // Debug
       }
     } else {
-      console.error(`Link index ${i} out of range`); // Debug
+      console.error(`Link key not found for index ${i}`); // Debug
     }
   });
 
