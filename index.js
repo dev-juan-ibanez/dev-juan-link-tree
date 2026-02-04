@@ -63,12 +63,12 @@ function handleSystemThemeChange(e) {
 
 const translations = {
   pt: {
-    title: "Juan Ibañez",
-    meta_description: "Página de links e portfólio de Juan Ibañez",
+    title: "Juan Ibanez",
+    meta_description: "Página de links e portfólio de Juan Ibanez",
     subtitle: "💻 Desenvolvedor Full Stack",
     bio: "Mestre em elétrica com ênfase em engenharia de software e engenharia dirigida a modelos. Apaixonado por tecnologia, desenvolvimento web e soluções criativas. Trabalho com React, Node.js e Golang, criando sistemas modernos e eficientes.",
     images_alt: {
-      avatar: "Avatar de Juan Ibañez",
+      avatar: "Avatar de Juan Ibanez",
       gmail: "Ícone e-mail",
       site: "Ícone site",
       github: "Ícone GitHub",
@@ -95,12 +95,12 @@ const translations = {
     language_select_title: "Selecionar idioma",
   },
   en: {
-    title: "Juan Ibañez",
-    meta_description: "Links and portfolio page of Juan Ibañez",
+    title: "Juan Ibanez",
+    meta_description: "Links and portfolio page of Juan Ibanez",
     subtitle: "💻 Full Stack Developer",
     bio: "Master in Electrical Engineering with emphasis on Software Engineering and Model-Driven Engineering. Passionate about technology, web development, and creative solutions. I work with React, Node.js, and Golang to build modern and efficient systems.",
     images_alt: {
-      avatar: "Avatar of Juan Ibañez",
+      avatar: "Avatar of Juan Ibanez",
       gmail: "Email icon",
       site: "Website icon",
       github: "GitHub icon",
@@ -127,12 +127,12 @@ const translations = {
     language_select_title: "Select language",
   },
   es: {
-    title: "Juan Ibañez",
-    meta_description: "Página de enlaces y portafolio de Juan Ibañez",
+    title: "Juan Ibanez",
+    meta_description: "Página de enlaces y portafolio de Juan Ibanez",
     subtitle: "💻 Desarrollador Full Stack",
     bio: "Máster en eléctrica con énfasis en ingeniería de software e ingeniería dirigida a modelos. Apasionado por la tecnología, el desarrollo web y las soluciones creativas. Trabajo con React, Node.js y Golang, creando sistemas modernos y eficientes.",
     images_alt: {
-      avatar: "Avatar de Juan Ibañez",
+      avatar: "Avatar de Juan Ibanez",
       gmail: "Ícono de correo",
       site: "Ícono de sitio web",
       github: "Ícono de GitHub",
@@ -224,7 +224,7 @@ function setLanguage(lang) {
   const footerMade = document.querySelector("footer p:nth-child(1)");
   if (footerMade) {
     console.log("Updating footer made to:", t.footer.made); // Debug
-    footerMade.innerHTML = `${t.footer.made} <span>Juan Ibañez</span>`;
+    footerMade.innerHTML = `${t.footer.made} <span>Juan Ibanez</span>`;
   } else {
     console.error("Footer made not found"); // Debug
   }
