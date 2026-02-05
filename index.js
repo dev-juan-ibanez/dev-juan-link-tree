@@ -88,7 +88,7 @@ const translations = {
     },
     footer: {
       made: "Feito com ❤️ por",
-      rights: "© Todos os direitos reservados 2025.",
+      rights: "© Todos os direitos reservados .",
     },
     theme: "⚙️ Tema:",
     language: "🌐 Idioma:",
@@ -120,7 +120,7 @@ const translations = {
     },
     footer: {
       made: "Made with ❤️ by",
-      rights: "© All rights reserved 2025.",
+      rights: "© All rights reserved .",
     },
     theme: "⚙️ Theme:",
     language: "🌐 Language:",
@@ -152,7 +152,7 @@ const translations = {
     },
     footer: {
       made: "Hecho con ❤️ por",
-      rights: "© Todos los derechos reservados 2025.",
+      rights: "© Todos los derechos reservados 2026.",
     },
     theme: "⚙️ Tema:",
     language: "🌐 Idioma:",
